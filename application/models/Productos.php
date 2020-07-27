@@ -7,7 +7,7 @@
         }
 
         public function create($datos){
-            if(!$this->db->insert('examen',$datos)){
+            if(!$this->db->insert('Examen',$datos)){
                 return false;
             }
             return true;
