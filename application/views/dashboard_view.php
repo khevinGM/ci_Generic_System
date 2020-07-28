@@ -15,19 +15,19 @@
         <p><?= $dat ?></p>
     <?php endif; ?>
     <nav>
-        <div class="container titulo">
+        <div class="container titulo_app">
             <h1>Nombre de la App</h1>
         </div>
         <div class="container logout">
             <a href="<?= base_url('Login/logout')?>">Cerrar Sesion</a>
         </div>
     </nav>
-    <div class="menu">
+    
         <aside>
-            <div class="container modules">
+            <div class="container list_user">
                 <h1>Nombre de usuario</h1>
             </div>
-            <ul>
+            <ul class="list_module">
                 <li>Pendientes</li>
                 <li>Avanze</li>
                 <li>Terminados</li>
@@ -35,10 +35,10 @@
             </ul>
         </aside>
         <main>
-            <div class="container titulo_proy">
+            <div class="titulo_proy">
                 <h1>Nombre del proyecto</h1>
             </div>
-            <div class="container usuarios">
+            <div class="usuarios">
                 <h4>Usuarios</h4>
                 <ul>
                     <li>User 1</li>
@@ -56,6 +56,6 @@
                 </div>
             </div>
         </main>
-    </div>
+    
 </body>
 </html>

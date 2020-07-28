@@ -6,37 +6,73 @@ body{
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 18% 1fr;
     grid-template-rows: 100px 1fr;
-    grid-template-areas: "nav"
-                         "menu";
+    grid-template-areas: "nav nav"
+                         "aside main";
 }
+
+/* Estilos de la barra de navegacion */
 nav{
     grid-area: nav;
-    background-color: #003858; 
+    background-color: #2E4AAD; 
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.titulo h1{
+
+.titulo_app{
+    padding: 0 20px;
+}
+.titulo_app h1{
     color: white;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.menu{
-    width: 100%;
-    height: 100%;
-    grid-area: menu;
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "aside main";
+.logout{
+    text-align: end;
 }
 
+.logout a{
+    width: 200px;
+    background-color: #D43636;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+
+/* Estilos de los modulos */
 aside{
     grid-area: aside;
     background-color: #262626;
+    
 }
 
+.list_user{
+    color:#ffffff;
+    padding: 10px 0 ;
+}
+
+.list_user h1{
+    font-size: 24px;
+    text-align: center;
+}
+
+.list_module{
+    list-style: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    /* height: 100%;
+} */
+
+.list_module li{
+    /* width: 100%; */
+}
+
+/* estilos de la parte principal del AppWeb */
 main{
     grid-area: main;
 }
