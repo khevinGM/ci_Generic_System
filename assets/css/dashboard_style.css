@@ -7,7 +7,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: 18% 1fr;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 10% 1fr;
     grid-template-areas: "nav nav"
                          "aside main";
 }
@@ -35,28 +35,37 @@ nav{
 }
 
 .logout a{
+    position: relative;
     width: 200px;
     background-color: #D43636;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 8px 5%;
+    margin: 0 0 0 10px;
     border-radius: 12px;
     text-decoration: none;
+    font-size: 80%;
+    font-weight: bold;
+    box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.2), 0 8px 16px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logout span{
+    color: #ffffff;
 }
 
 
 /* Estilos de los modulos */
 aside{
     grid-area: aside;
-    background-color: #262626;
+    /* background-color: #262626; */
     
 }
 
-.list_user{
+.name_user{
     color:#ffffff;
     padding: 10px 0 ;
 }
 
-.list_user h1{
+.name_user h1{
     font-size: 24px;
     text-align: center;
 }
@@ -64,27 +73,96 @@ aside{
 .list_module{
     list-style: none;
     color: #ffffff;
-    padding: 10px 20px;
-    /* height: 100%;
-} */
+    padding: 10px 0;
+    /* /* height: 100%; */
+} 
 
 .list_module li{
-    /* width: 100%; */
+    padding: 0;
+    margin: 0;
 }
+
+.list_module li a{
+    width: 100%;
+    /* color: #ffffff; */
+    text-decoration: none;
+    display: flex;
+    padding: 10px 20px;
+}
+
+/* .list_module li:hover{
+    background-color: #383838;
+} */
+
 
 /* estilos de la parte principal del AppWeb */
 main{
     grid-area: main;
+    margin: 10px 10px 0 10px;
+    display: grid;
+    grid-template-columns: 22% 1fr;
+    grid-template-rows: 14% 1fr;
+    grid-template-areas: "title title"
+                         "users proy";
 }
 
-.titulo_proy{
+.title_proy{
+    grid-area: title;
+    margin: 0 10px;
+    padding: 20px 0;
+    border-radius: 18px;
+    background-color: rgba(196, 196, 196, .24);
+    display: flex;
+    align-items: center;
+}
+
+.title_proy h1{
+    font-size: 24px;
+    padding: 0 20px;
+}
+
+
+
+.list_users{
+    grid-area: users;
+    margin: 20px 10px 0 10px;
+    padding: 0 20px;
+    border-radius: 18px 18px 0 0;
     background-color: rgba(196, 196, 196, .24);
 }
 
-.usuarios{
-    background-color: rgba(196, 196, 196, .24);
+.list_users h1{
+    font-size: 18px;
+    padding: 20px 0 0 0;
+}
+
+.list_users ul{
+    list-style: none;
+    padding: 8px 0;
+}
+.list_users ul li{
+    padding: 14px 0;
+    font-size: 12px;
+}
+
+.list_users ul li img{
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
 }
 
 .list_proy{
+    grid-area: proy;
+    margin: 20px 10px 0 10px;
+    border-radius: 18px 18px 0 0;
     background-color: rgba(196, 196, 196, .24);
+}
+.list_proy section{
+    margin: 20px;
+}
+
+.filtrar{
+    margin: 0 0 20px 0;
 }

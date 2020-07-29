@@ -11,50 +11,53 @@
     <title>App</title>
 </head>
 <body>
-    <?php if($dat = $this->session->flashdata('msg')):?>
-        <p><?= $dat ?></p>
-    <?php endif; ?>
+    <!-- BARRA DE NAVEGACION -->
     <nav>
         <div class="container titulo_app">
             <h1>Nombre de la App</h1>
         </div>
         <div class="container logout">
+            <span><?php echo $this->session->user; ?></span>
             <a href="<?= base_url('Login/logout')?>">Cerrar Sesion</a>
         </div>
     </nav>
-    
+    <!-- CONTENEDOR PRINCIPAL -->
         <aside>
-            <div class="container list_user">
-                <h1>Nombre de usuario</h1>
+            <div class="container name_user">
+                <h1><?php if($dat = $this->session->flashdata('msg')):?>
+        <p><?= $dat ?></p>
+    <?php endif; ?></h1>
             </div>
             <ul class="list_module">
-                <li>Pendientes</li>
-                <li>Avanze</li>
-                <li>Terminados</li>
-                <li>Compartidos</li>
+                <li class="nav-item active"><a href="#" class="nav-link">Pendientes</a></li>
+                <li><a href="#" class="" data-toggle="pill">Avanze</a></li>
+                <li><a href="#" class="">Terminados</a></li>
+                <li><a href="#" class="">Compartidos</a></li>
             </ul>
         </aside>
         <main>
-            <div class="titulo_proy">
-                <h1>Nombre del proyecto</h1>
-            </div>
-            <div class="usuarios">
-                <h4>Usuarios</h4>
-                <ul>
-                    <li>User 1</li>
-                    <li>User 2</li>
-                    <li>User 3</li>
-                    <li>User 4</li>
-                </ul>
-            </div>
-            <div class="list_proy">
-                <div class="filtrar">
-
+            <div class="title_proy">
+                    <h1>Nombre del proyecto</h1>
                 </div>
-                <div class="proy">
-
+                <div class="list_users">
+                    <h1>Usuarios</h1>
+                    <ul>
+                        <li><img src="#" alt="">User 1</li>
+                        <li><img src="#" alt="">User 2</li>
+                        <li><img src="#" alt="">User 3</li>
+                        <li><img src="#" alt="">User 4</li>
+                    </ul>
                 </div>
-            </div>
+                <div class="list_proy">
+                    <section>
+                        <div class="filtrar">
+                            Lorem ipsum dolor sit amet consectetur 
+                        </div>
+                        <div class="proy">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore cupiditate eum ratione atque dolorem placeat beatae unde, odit quae nisi nostrum impedit excepturi eos in porro blanditiis, delectus fugit velit.
+                        </div>
+                    </section>
+                </div>
         </main>
     
 </body>
