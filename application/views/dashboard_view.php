@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('/assets/css/dashboard_style.css') ?>">
     <title>App</title>
@@ -29,7 +29,7 @@
     <?php endif; ?></h1>
             </div>
             <ul class="list_module">
-                <li class="nav-item active"><a href="#" class="nav-link">Pendientes</a></li>
+                <li><a href="#" class="<?= $this->uri->segment(1) == 'dashboard' ? 'bg-primary text-white' : '';?>"><span>Pendientes</span></a></li>
                 <li><a href="#" class="" data-toggle="pill">Avanze</a></li>
                 <li><a href="#" class="">Terminados</a></li>
                 <li><a href="#" class="">Compartidos</a></li>

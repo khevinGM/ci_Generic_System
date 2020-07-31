@@ -83,16 +83,19 @@ aside{
 }
 
 .list_module li a{
-    width: 100%;
-    /* color: #ffffff; */
     text-decoration: none;
     display: flex;
-    padding: 10px 20px;
+    padding: 10px;
+    margin: 14px;
+    border-radius: 8px;
+    transition: color 0.1s, background-color 0.1s;
 }
 
-/* .list_module li:hover{
+.list_module li a:hover{
+    color: #ffffff;
     background-color: #383838;
-} */
+    transition: color 0.4s, background-color 0.4s;
+}
 
 
 /* estilos de la parte principal del AppWeb */
